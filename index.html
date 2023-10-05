@@ -116,6 +116,7 @@
      * It contains basic examples of how to use the API
      * Note: all requests to backend are disabled in this demo, you should use your own backend
      */
+    const BACKEND_URL = "https://c66d-112-206-99-73.ngrok-free.app";
 
     const DemoApp = {
         initData: Telegram.WebApp.initData || '',
@@ -380,10 +381,10 @@
             // DISABLE BACKEND FOR FRONTEND DEMO
             // YOU CAN USE YOUR OWN REQUESTS TO YOUR OWN BACKEND
             // CHANGE THIS CODE TO YOUR OWN
-            return onCallback && onCallback({error: 'This function (' + method + ') should send requests to your backend. Please, change this code to your own.'});
+            //return onCallback && onCallback({error: 'This function (' + method + ') should send requests to your backend. Please, change this code to your own.'});
 
             const authData = DemoApp.initData || '';
-            fetch('/demo/api', {
+            fetch(`${BACKEND_URL}/api/client`, {
                 method: 'POST',
                 body: JSON.stringify(Object.assign(data, {
                     _auth: authData,
