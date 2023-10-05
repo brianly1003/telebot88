@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Projects\TeleBot\TeleBot\bin\Debug\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2023-09-28T14:55:07.1021092Z;True|2023-09-28T22:54:54.9082511+08:00;True|2023-09-28T22:44:31.4363048+08:00;True|2023-09-28T22:44:22.2130094+08:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
