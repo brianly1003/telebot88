@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using TeleBot.Filters;
 using TeleBot.Services;
 using Telegram.Bot.Types;
 
@@ -8,7 +8,7 @@ namespace TeleBot.Controllers
     public class BotController : ControllerBase
     {
         [HttpPost]
-        //[ValidateTelegramBot]
+        [ValidateTelegramBot]
         public async Task<IActionResult> Post(
             [FromBody] Update update,
             [FromServices] UpdateHandlers handleUpdateService,
