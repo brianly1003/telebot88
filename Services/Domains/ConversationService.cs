@@ -1,8 +1,8 @@
-﻿//using Karamel.LiveChat.Proto;
-//using Karamel.TeleBot.Model.Conversation;
-//using Karamel.TeleBot.Services.Interfaces;
+﻿//using W88.LiveChat.Proto;
+//using W88.TeleBot.Model.Conversation;
+//using W88.TeleBot.Services.Interfaces;
 
-//namespace Karamel.TeleBot.Services.Domains
+//namespace W88.TeleBot.Services.Domains
 //{
 //    public class ConversationService(LiveChat.Proto.ConversationService.ConversationServiceClient conversationClient)
 //        : IConversationService

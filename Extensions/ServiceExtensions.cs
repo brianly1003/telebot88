@@ -4,9 +4,9 @@ using W88.TeleBot.ServiceBot.Interfaces;
 using W88.TeleBot.Services.Domains;
 using W88.TeleBot.Services.Interfaces;
 
-//using Karamel.LiveChat.Proto;
+//using W88.LiveChat.Proto;
 
-//using ConversationService = Karamel.LiveChat.Proto.ConversationService;
+//using ConversationService = W88.LiveChat.Proto.ConversationService;
 
 namespace W88.TeleBot.Extensions;
 

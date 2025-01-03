@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <!--<Protobuf Include="..\Karamel.Application\Protos\messaging.proto" GrpcServices="Client" Link="Protos\messaging.proto" />-->
+	  <!--<Protobuf Include="..\W88.Application\Protos\messaging.proto" GrpcServices="Client" Link="Protos\messaging.proto" />-->
 
 	  <PackageReference Include="Google.Protobuf" Version="3.28.3" />
 

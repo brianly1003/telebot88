@@ -1,5 +1,4 @@
-﻿using CW88.TeleBot.ServiceBot;
-using W88.TeleBot.ServiceBot.Constants;
+﻿using W88.TeleBot.ServiceBot.Constants;
 using W88.TeleBot.ServiceBot.Interfaces;
 
 namespace W88.TeleBot.ServiceBot.Commands.Deposit;
@@ -13,6 +12,6 @@ public class PaymentGatewayCommand(ICommandHandler commandHandler, IUserStateMan
     public override async Task ExecuteAsync(ITelegramBotClient botClient, Message? message, CallbackQuery? callback,
         InlineQuery? inlineQuery, CancellationToken cancellationToken)
     {
-            
-        }
+
+    }
 }

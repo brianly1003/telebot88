@@ -1,5 +1,4 @@
-﻿using CW88.TeleBot.ServiceBot;
-using Microsoft.Extensions.Localization;
+﻿using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Telegram.Bot.Types.Enums;

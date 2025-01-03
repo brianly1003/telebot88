@@ -1,11 +1,10 @@
 ﻿using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.InlineQueryResults;
 using Telegram.Bot.Types.ReplyMarkups;
-using W88.TeleBot.ServiceBot;
 using W88.TeleBot.ServiceBot.Constants;
 using W88.TeleBot.ServiceBot.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot.Commands;
+namespace W88.TeleBot.ServiceBot.Commands;
 
 public class MiniAppCommand(ICommandHandler commandHandler, IUserStateManager userStateManager)
     : BaseCommand(commandHandler, userStateManager)

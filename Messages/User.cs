@@ -1,6 +1,6 @@
 ﻿//using Google.Protobuf.WellKnownTypes;
 
-//namespace Karamel.LiveChat.Proto;
+//namespace W88.LiveChat.Proto;
 
 ////Properties for the underlying data are generated from the.proto file
 ////This partial class just adds some extra convenience properties

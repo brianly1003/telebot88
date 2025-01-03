@@ -12,6 +12,6 @@ public class SettingCommand(ICommandHandler commandHandler, IUserStateManager us
     public override async Task ExecuteAsync(ITelegramBotClient botClient, Message? message, CallbackQuery? callback,
         InlineQuery? inlineQuery, CancellationToken cancellationToken)
     {
-            await base.ExecuteAsync(botClient, message, callback, inlineQuery, cancellationToken);
-        }
+        await base.ExecuteAsync(botClient, message, callback, inlineQuery, cancellationToken);
+    }
 }

@@ -145,14 +145,14 @@ Jangan ketinggalan update menarik yang akan datang!</value>
   <data name="Unable to register:" xml:space="preserve">
     <value>Tidak dapat mendaftar:</value>
   </data>
-  <data name="Welcome to CW88 Casino" xml:space="preserve">
-    <value>Selamat datang ke CW88 Casino. 
-Sila kongsikan nombor telefon anda dengan klik "\u2705 Sahkan" untuk meneruskan ke log masuk atau pendaftaran akaun baru.</value>
-  </data>
   <data name="You have entered a registered mobile number. Please try again." xml:space="preserve">
     <value>Anda telah memasukkan nombor telefon bimbit yang telah didaftarkan. Sila cuba lagi.</value>
   </data>
   <data name="You have entered an invalid mobile number. Please try again." xml:space="preserve">
     <value>Anda telah memasukkan nombor telefon bimbit yang tidak sah. Sila cuba lagi.</value>
+  </data>
+  <data name="Welcome to W88 Casino" xml:space="preserve">
+    <value>Welcome to W88 Casino. 
+Please share your contact number by clicking "\u2705 Confirm" to proceed to login or new account registration.</value>
   </data>
 </root>

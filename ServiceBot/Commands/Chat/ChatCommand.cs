@@ -1,21 +1,21 @@
-﻿//using Karamel.Shared.Dtos.ChatHub;
-//using Karamel.Shared.Enums;
-//using Karamel.Shared.Interfaces.ChatHub;
-//using Karamel.Shared.Utils;
-//using Karamel.TeleBot.Model;
-//using Karamel.TeleBot.Model.Conversation;
-//using Karamel.TeleBot.ServiceBot.Constants;
-//using Karamel.TeleBot.ServiceBot.Interfaces;
-//using Karamel.TeleBot.Services.Interfaces;
-//using Microsoft.AspNetCore.SignalR.Client;
+﻿//using Microsoft.AspNetCore.SignalR.Client;
 //using Microsoft.Extensions.Options;
 //using Telegram.Bot;
 //using Telegram.Bot.Types;
+//using W88.Shared.Dtos.ChatHub;
+//using W88.Shared.Enums;
+//using W88.Shared.Interfaces.ChatHub;
+//using W88.Shared.Utils;
+//using W88.TeleBot.Model;
+//using W88.TeleBot.Model.Conversation;
+//using W88.TeleBot.ServiceBot.Constants;
+//using W88.TeleBot.ServiceBot.Interfaces;
+//using W88.TeleBot.Services.Interfaces;
 //using Message = Telegram.Bot.Types.Message;
-//using User = Karamel.LiveChat.Proto.User;
+//using User = W88.LiveChat.Proto.User;
 
 
-//namespace Karamel.TeleBot.ServiceBot.Commands.Chat
+//namespace W88.TeleBot.ServiceBot.Commands.Chat
 //{
 //    public class ChatCommand(
 //        ICommandHandler commandHandler,

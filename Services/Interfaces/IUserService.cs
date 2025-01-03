@@ -1,8 +1,8 @@
-﻿//using Karamel.LiveChat.Proto;
-//using Karamel.Shared.Model;
-//using Karamel.TeleBot.Model.User;
+﻿//using W88.LiveChat.Proto;
+//using W88.Shared.Model;
+//using W88.TeleBot.Model.User;
 
-//namespace Karamel.TeleBot.Services.Interfaces
+//namespace W88.TeleBot.Services.Interfaces
 //{
 //    public interface IUserService
 //    {

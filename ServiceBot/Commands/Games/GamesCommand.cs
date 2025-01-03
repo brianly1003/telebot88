@@ -1,5 +1,4 @@
-﻿using CW88.TeleBot.ServiceBot;
-using Telegram.Bot.Types.InlineQueryResults;
+﻿using Telegram.Bot.Types.InlineQueryResults;
 using W88.TeleBot.ServiceBot.Constants;
 using W88.TeleBot.ServiceBot.Interfaces;
 

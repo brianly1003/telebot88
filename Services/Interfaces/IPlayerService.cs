@@ -1,6 +1,4 @@
-﻿using W88.TeleBot.Model.Player;
-
-namespace W88.TeleBot.Services.Interfaces;
+﻿namespace W88.TeleBot.Services.Interfaces;
 
 public interface IPlayerService
 {

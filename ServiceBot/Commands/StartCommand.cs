@@ -1,5 +1,4 @@
-﻿using CW88.TeleBot.ServiceBot;
-using Microsoft.Extensions.Localization;
+﻿using Microsoft.Extensions.Localization;
 using Telegram.Bot.Types.ReplyMarkups;
 using W88.TeleBot.Resources;
 using W88.TeleBot.ServiceBot.Constants;
@@ -37,7 +36,7 @@ public class StartCommand(
                 ResizeKeyboard = true
             };
 
-            var textMsg = localizer["Welcome to CW88 Casino"].Value.Replace("\\u2705", "\u2705");
+            var textMsg = localizer["Welcome to W88 Casino"].Value.Replace("\\u2705", "\u2705");
 
             _ = await botClient.SendMessage(
                 chatId: chatId!,

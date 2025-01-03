@@ -84,7 +84,7 @@ public class ShareContactCommand(
         catch (Exception ex)
         {
             logger.LogError(ex, ex.Message);
-            await botClient.SendTextMessageAsync(chatId,
+            await botClient.SendMessage(chatId,
                 $"An error occured. Please try again later!",
                 cancellationToken: cancellationToken);
         }

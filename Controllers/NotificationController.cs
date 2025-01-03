@@ -107,7 +107,7 @@ public class NotificationController(
     [Route("Broadcast")]
     public async Task<IActionResult> BroadcastMessage(MessageRequest request)
     {
-        request.ChatIds = new List<long> { -4034990842, 1142101264 };
+        request.ChatIds = [-4034990842, 1142101264];
 
         var messageText = request.Message;
 
@@ -115,7 +115,7 @@ public class NotificationController(
         {
             try
             {
-                await botClient.SendTextMessageAsync(chatId: userId, text: messageText);
+                await botClient.SendMessage(chatId: userId, text: messageText);
             }
             catch (Exception ex)
             {

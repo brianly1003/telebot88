@@ -26,7 +26,7 @@ public class UpdateHandler(
             //new BotCommand { Command = TextCommands.InlineButton, Description = "Inline Button" }
         ], scope: BotCommandScope.Default(), cancellationToken: cancellationToken);
 
-        const string botDescription = $"Welcome to CW88 Casino. " +
+        const string botDescription = $"Welcome to W88 Casino. " +
                                       $"We offer thrilling gaming experience on the web at CW88.Club and Telegram MiniApp Casino here within this BOT! " +
                                       $"Sign up and join us today, enjoy generous WELCOME BONUS and other lucrative bonuses! " +
                                       $"Start CUCIWIN88 NOW!";

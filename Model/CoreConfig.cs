@@ -1,6 +1,6 @@
 ﻿namespace W88.TeleBot.Model;
 
-public class BotConfig
+public abstract class BotConfig
 {
     public string BotName { get; init; } = string.Empty;
     public string BotToken { get; init; } = string.Empty;

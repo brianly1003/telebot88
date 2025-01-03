@@ -65,5 +65,4 @@ public class AddBankAccountCommand(
 
         return new InlineKeyboardMarkup(rows);
     }
-
 }

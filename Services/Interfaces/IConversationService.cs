@@ -1,6 +1,6 @@
-﻿//using Karamel.TeleBot.Model.Conversation;
+﻿//using W88.TeleBot.Model.Conversation;
 
-//namespace Karamel.TeleBot.Services.Interfaces
+//namespace W88.TeleBot.Services.Interfaces
 //{
 //    public interface IConversationService
 //    {

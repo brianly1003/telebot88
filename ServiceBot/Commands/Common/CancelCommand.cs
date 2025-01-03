@@ -1,5 +1,4 @@
-﻿using CW88.TeleBot.ServiceBot;
-using W88.TeleBot.ServiceBot.Constants;
+﻿using W88.TeleBot.ServiceBot.Constants;
 using W88.TeleBot.ServiceBot.Interfaces;
 
 namespace W88.TeleBot.ServiceBot.Commands.Common;
