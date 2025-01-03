@@ -152,7 +152,7 @@ void Configure()
 
     app.MapGet("/", async context =>
     {
-        await context.Response.WriteAsync("Welcome to our CW88 Telegram Bot!");
+        await context.Response.WriteAsync("Welcome to our W88 Telegram Bot!");
     });
 
     app.UseWebSockets();
