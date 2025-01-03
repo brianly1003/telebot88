@@ -38,7 +38,7 @@ public class PromotionCommand(
             var inlineKeyboard = GenerateInlineKeyboard(promotionList.Select(s => s.PromotionType).ToList(),
                 type: PromotionEnum.PromotionType, columns: 2);
 
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: textMsg,
                 replyMarkup: inlineKeyboard,

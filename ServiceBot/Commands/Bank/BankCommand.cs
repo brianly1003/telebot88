@@ -31,7 +31,7 @@ public class BankCommand(ICommandHandler commandHandler, IUserStateManager userS
 
         if (callbackQuery == null)
         {
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: textMsg,
                 replyMarkup: inlineKeyboard,

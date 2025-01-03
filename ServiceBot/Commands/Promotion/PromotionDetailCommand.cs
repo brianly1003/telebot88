@@ -45,7 +45,7 @@ public class PromotionDetailCommand(
                 $"{promotionDetail.Content}" +
                 $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
 
-            _ = await botClient.EditMessageTextAsync(
+            _ = await botClient.EditMessageText(
                 chatId: chatId,
                 messageId: messageId,
                 text: textMsg,

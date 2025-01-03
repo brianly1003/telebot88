@@ -44,11 +44,11 @@ public class WalletCommand(ICommandHandler commandHandler, IUserStateManager use
 
             if (callbackQuery != null)
             {
-                await botClient.DeleteMessageAsync(chatId: chatId, messageId: messageId,
+                await botClient.DeleteMessage(chatId: chatId, messageId: messageId,
                     cancellationToken: cancellationToken);
             }
 
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: htmlText,
                 replyMarkup: inlineKeyboard,

@@ -19,57 +19,85 @@ public class DepositCommand(ICommandHandler commandHandler, IUserStateManager us
     public override async Task ExecuteAsync(ITelegramBotClient botClient, Message? message,
         CallbackQuery? callbackQuery, InlineQuery? inlineQuery, CancellationToken cancellationToken)
     {
-            var chatId = message?.Chat.Id;
-            if (chatId == null) return;
+        var chatId = message?.Chat.Id;
+        if (chatId == null) return;
 
-            var messageId = message?.MessageId ?? -1;
+        var messageId = message?.MessageId ?? -1;
 
-            if (callbackQuery == null)
+        if (callbackQuery == null)
+        {
+            var callbackDataObject = new CallbackData(TextCommands.Cancel, CommandNames.DepositCommand);
+            var callbackDataString = JsonConvert.SerializeObject(callbackDataObject);
+
+            var inlineKeyboard = new InlineKeyboardMarkup(new[]
             {
-                var callbackDataObject = new CallbackData(TextCommands.Cancel, CommandNames.DepositCommand);
-                var callbackDataString = JsonConvert.SerializeObject(callbackDataObject);
+                [
+                    InlineKeyboardButton.WithCallbackData(TextCommands.OnlineBanking),
+                    InlineKeyboardButton.WithCallbackData(TextCommands.PaymentGateway)
+                ],
+                new[] { InlineKeyboardButton.WithCallbackData(TextCommands.Cancel, callbackDataString) }
+            });
 
-                var inlineKeyboard = new InlineKeyboardMarkup(new[]
-                {
-                    [
-                        InlineKeyboardButton.WithCallbackData(TextCommands.OnlineBanking),
-                        InlineKeyboardButton.WithCallbackData(TextCommands.PaymentGateway)
-                    ],
-                    new[] { InlineKeyboardButton.WithCallbackData(TextCommands.Cancel, callbackDataString) }
-                });
+            var textMsg =
+                "Please select" +
+                $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
 
-                var textMsg =
-                    "Please select" +
-                    $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
+            _ = await botClient.SendMessage(
+                chatId: chatId,
+                text: textMsg,
+                replyMarkup: inlineKeyboard,
+                cancellationToken: cancellationToken);
+        }
+        else
+        {
+            var callbackData = DataExtensions.BuildCallbackData(callbackQuery?.Data ?? string.Empty);
 
-                _ = await botClient.SendTextMessageAsync(
-                    chatId: chatId,
-                    text: textMsg,
-                    replyMarkup: inlineKeyboard,
-                    cancellationToken: cancellationToken);
-            }
-            else
+            // Close the query to end the client-side loading animation
+            //await botClient.AnswerCallbackQueryAsync(callbackQueryId: callbackQuery?.Id!, text: "TEST...", cancellationToken: cancellationToken);
+
+            switch (callbackData?.CommandText)
             {
-                var callbackData = DataExtensions.BuildCallbackData(callbackQuery?.Data ?? string.Empty);
-
-                // Close the query to end the client-side loading animation
-                //await botClient.AnswerCallbackQueryAsync(callbackQueryId: callbackQuery?.Id!, text: "TEST...", cancellationToken: cancellationToken);
-
-                switch (callbackData?.CommandText)
+                case TextCommands.Cancel:
                 {
-                    case TextCommands.Cancel:
+                    const string textMsg = "Action cancelled.";
+
+                    _ = await botClient.EditMessageText(
+                        chatId: chatId,
+                        messageId: messageId,
+                        text: textMsg,
+                        replyMarkup: null,
+                        cancellationToken: cancellationToken);
+                    break;
+                }
+                case TextCommands.Back:
+                {
+                    var callbackDataObject = new CallbackData(TextCommands.Cancel, CommandNames.DepositCommand);
+                    var callbackDataString = JsonConvert.SerializeObject(callbackDataObject);
+
+                    var inlineKeyboard = new InlineKeyboardMarkup(new[]
                     {
-                        const string textMsg = "Action cancelled.";
+                        new[]
+                        {
+                            InlineKeyboardButton.WithCallbackData(TextCommands.OnlineBanking),
+                            InlineKeyboardButton.WithCallbackData(TextCommands.PaymentGateway)
+                        },
+                        new[] { InlineKeyboardButton.WithCallbackData(TextCommands.Cancel, callbackDataString) }
+                    });
 
-                        _ = await botClient.EditMessageTextAsync(
-                            chatId: chatId,
-                            messageId: messageId,
-                            text: textMsg,
-                            replyMarkup: null,
-                            cancellationToken: cancellationToken);
-                        break;
-                    }
-                    case TextCommands.Back:
+                    var textMsg =
+                        "Please select" +
+                        $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
+
+                    _ = await botClient.EditMessageText(
+                        chatId: chatId,
+                        messageId: messageId,
+                        text: textMsg,
+                        replyMarkup: inlineKeyboard,
+                        cancellationToken: cancellationToken);
+                    break;
+                }
+                default:
+                    if (callbackQuery?.Data == CommandText)
                     {
                         var callbackDataObject = new CallbackData(TextCommands.Cancel, CommandNames.DepositCommand);
                         var callbackDataString = JsonConvert.SerializeObject(callbackDataObject);
@@ -88,44 +116,16 @@ public class DepositCommand(ICommandHandler commandHandler, IUserStateManager us
                             "Please select" +
                             $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
 
-                        _ = await botClient.EditMessageTextAsync(
+                        _ = await botClient.EditMessageText(
                             chatId: chatId,
                             messageId: messageId,
                             text: textMsg,
                             replyMarkup: inlineKeyboard,
                             cancellationToken: cancellationToken);
-                        break;
                     }
-                    default:
-                        if (callbackQuery?.Data == CommandText)
-                        {
-                            var callbackDataObject = new CallbackData(TextCommands.Cancel, CommandNames.DepositCommand);
-                            var callbackDataString = JsonConvert.SerializeObject(callbackDataObject);
 
-                            var inlineKeyboard = new InlineKeyboardMarkup(new[]
-                            {
-                                new[]
-                                {
-                                    InlineKeyboardButton.WithCallbackData(TextCommands.OnlineBanking),
-                                    InlineKeyboardButton.WithCallbackData(TextCommands.PaymentGateway)
-                                },
-                                new[] { InlineKeyboardButton.WithCallbackData(TextCommands.Cancel, callbackDataString) }
-                            });
-
-                            var textMsg =
-                                "Please select" +
-                                $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
-
-                            _ = await botClient.EditMessageTextAsync(
-                                chatId: chatId,
-                                messageId: messageId,
-                                text: textMsg,
-                                replyMarkup: inlineKeyboard,
-                                cancellationToken: cancellationToken);
-                        }
-
-                        break;
-                }
+                    break;
             }
         }
+    }
 }

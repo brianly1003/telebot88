@@ -27,7 +27,7 @@ public class NotificationController(
             AllowedUpdates = []
         };
 
-        var me = await botClient.GetMeAsync(cancellationToken: cts.Token);
+        var me = await botClient.GetMe(cancellationToken: cts.Token);
 
         botClient.StartReceiving(
             updateHandler: HandleUpdateAsync,

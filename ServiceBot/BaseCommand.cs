@@ -29,7 +29,7 @@ public abstract class BaseCommand(
         if (chatId == null) return;
 
         if (message?.Text != null)
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: message.Text,
                 cancellationToken: cancellationToken);

@@ -27,7 +27,7 @@ public class TelegramBotHostedService(
             if (botConfig.UseWebhook)
             {
                 var webhookAddress = $"{botConfig.HostAddress}/{botConfig.BotName.ToLowerInvariant()}";
-                await botClient.SetWebhookAsync(
+                await botClient.SetWebhook(
                     url: webhookAddress,
                     allowedUpdates: Array.Empty<UpdateType>(),
                     secretToken: botConfig.SecretToken,
@@ -37,7 +37,7 @@ public class TelegramBotHostedService(
             }
             else
             {
-                await botClient.DeleteWebhookAsync(cancellationToken: cancellationToken);
+                await botClient.DeleteWebhook(cancellationToken: cancellationToken);
                 ReceiverOptions receiverOptions = new()
                 {
                     AllowedUpdates = [],
@@ -63,8 +63,8 @@ public class TelegramBotHostedService(
             var botClientFactory = scope.ServiceProvider.GetRequiredService<ITelegramBotClientFactory>();
             var botClient = botClientFactory.GetClient(botConfig.BotName);
 
-            await botClient.DeleteWebhookAsync(cancellationToken: cancellationToken);
-            await botClient.CloseAsync(cancellationToken: cancellationToken);
+            await botClient.DeleteWebhook(cancellationToken: cancellationToken);
+            await botClient.Close(cancellationToken: cancellationToken);
         }
     }
 }

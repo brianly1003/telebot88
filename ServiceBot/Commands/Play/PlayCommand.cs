@@ -90,7 +90,7 @@ public class PlayCommand(
                 await using var stream = File.OpenRead(filePath);
                 var imageFile = InputFile.FromStream(stream, "cw88-welcome.png");
 
-                _ = await botClient.SendPhotoAsync(
+                _ = await botClient.SendPhoto(
                     chatId: chatId,
                     photo: imageFile,
                     caption: htmlText,
@@ -126,7 +126,7 @@ public class PlayCommand(
         catch (Exception ex)
         {
             logger.LogError(ex, ex.ToString());
-            await botClient.SendTextMessageAsync(chatId,
+            await botClient.SendMessage(chatId,
                 localizer["An error occured. Please try again later!"],
                 cancellationToken: cancellationToken);
         }

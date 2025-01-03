@@ -36,7 +36,7 @@ public class CopyCommand(ICommandHandler commandHandler, IUserStateManager userS
 
         if (callbackQuery == null)
         {
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: textMsg,
                 replyMarkup: inlineKeyboard,
@@ -47,7 +47,7 @@ public class CopyCommand(ICommandHandler commandHandler, IUserStateManager userS
         {
             var messageId = message?.MessageId ?? -1;
 
-            _ = await botClient.EditMessageTextAsync(
+            _ = await botClient.EditMessageText(
                 chatId: chatId,
                 messageId: messageId,
                 text: textMsg,

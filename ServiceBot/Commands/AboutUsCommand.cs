@@ -28,7 +28,7 @@ public class AboutUsCommand(ICommandHandler commandHandler, IUserStateManager us
             "\n\nWith our Telegram Casino Bot, you can enjoy popular casino games such as slots, blackjack, roulette, and poker, all from the comfort of your Telegram chat. We've carefully selected top-quality games from renowned game providers to ensure an immersive and entertaining gaming experience." +
             $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
 
-        _ = await botClient.SendTextMessageAsync(
+        _ = await botClient.SendMessage(
             chatId: chatId,
             text: textMsg,
             replyMarkup: inlineKeyboard,

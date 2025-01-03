@@ -46,7 +46,7 @@ public class GameCommand(ICommandHandler commandHandler, IUserStateManager userS
                 "Please select" +
                 $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
 
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: textMsg,
                 replyMarkup: inlineKeyboard,

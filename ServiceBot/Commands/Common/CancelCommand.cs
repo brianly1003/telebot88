@@ -22,7 +22,7 @@ public class CancelCommand(ICommandHandler commandHandler, IUserStateManager use
 
         const string textMsg = "Action cancelled.";
 
-        _ = await botClient.EditMessageTextAsync(
+        _ = await botClient.EditMessageText(
             chatId: chatId,
             messageId: messageId,
             text: textMsg,

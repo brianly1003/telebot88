@@ -18,8 +18,8 @@ public class UpdateHandler(
 {
     public async Task ConfigBot(ITelegramBotClient botClient, CancellationToken cancellationToken)
     {
-        await botClient.DeleteMyCommandsAsync(scope: BotCommandScope.AllPrivateChats(), cancellationToken: cancellationToken);
-        await botClient.SetMyCommandsAsync(commands:
+        await botClient.DeleteMyCommands(scope: BotCommandScope.AllPrivateChats(), cancellationToken: cancellationToken);
+        await botClient.SetMyCommands(commands:
         [
             new BotCommand { Command = TextCommands.Start, Description = "Start" },
             //new BotCommand { Command = TextCommands.Play, Description = "Play Game" },
@@ -33,7 +33,7 @@ public class UpdateHandler(
                                       $"Sign up and join us today, enjoy generous WELCOME BONUS and other lucrative bonuses! " +
                                       $"Start CUCIWIN88 NOW!";
 
-        await botClient.SetMyDescriptionAsync(botDescription, cancellationToken: cancellationToken);
+        await botClient.SetMyDescription(botDescription, cancellationToken: cancellationToken);
     }
 
     public async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
@@ -85,7 +85,7 @@ public class UpdateHandler(
         await InitialLoading(botClient, message, cancellationToken);
 
         // Fetch bot information
-        var me = await botClient.GetMeAsync(cancellationToken);
+        var me = await botClient.GetMe(cancellationToken);
 
         var chatId = message.Chat.Id;
 
@@ -107,7 +107,7 @@ public class UpdateHandler(
     private async Task BotOnCallbackQueryReceived(ITelegramBotClient botClient, CallbackQuery callbackQuery, CancellationToken cancellationToken)
     {
         // Fetch bot information
-        var me = await botClient.GetMeAsync(cancellationToken);
+        var me = await botClient.GetMe(cancellationToken);
 
         var callbackDataString = callbackQuery.Data ?? string.Empty;
         var callbackDataObject = DataExtensions.BuildCallbackData(callbackDataString);
@@ -141,7 +141,7 @@ public class UpdateHandler(
 
     private async Task BotOnInlineQueryReceived(ITelegramBotClient botClient, InlineQuery? inlineQuery, CancellationToken cancellationToken)
     {
-        var me = await botClient.GetMeAsync(cancellationToken);
+        var me = await botClient.GetMe(cancellationToken);
 
         // TODO: Refactor
         inlineQuery!.Query = CommandNames.GamesCommand;
@@ -159,7 +159,7 @@ public class UpdateHandler(
 
         var chatId = message.Chat.Id;
 
-        await botClient.SetChatMenuButtonAsync(chatId: chatId, menuButton: new MenuButtonCommands(),
+        await botClient.SetChatMenuButton(chatId: chatId, menuButton: new MenuButtonCommands(),
             cancellationToken: cancellationToken);
     }
     #endregion
@@ -171,7 +171,7 @@ public class UpdateHandler(
     {
         logger.LogInformation("Received inline result: {ChosenInlineResultId}", chosenInlineResult.ResultId);
 
-        await botClient.SendTextMessageAsync(
+        await botClient.SendMessage(
             chatId: chosenInlineResult.From.Id,
             text: $"You chose result with Id: {chosenInlineResult.ResultId}",
             cancellationToken: cancellationToken);

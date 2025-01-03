@@ -39,7 +39,7 @@ public class InlineButtonCommand : BaseCommand
             //var imageFile = InputFile.FromUri("https://github.com/brianly1003/telebot88/raw/main/assets/media/whale_promo_fixed.mp4");
             var imageFile = InputFile.FromUri("https://github.com/brianly1003/telebot88/raw/main/assets/media/game-photo-640x360.png");
 
-            //_ = await botClient.SendAnimationAsync(
+            //_ = await botClient.SendAnimation(
             //    chatId: chatId,
             //    animation: imageFile,
             //    caption: textMsg,
@@ -47,7 +47,7 @@ public class InlineButtonCommand : BaseCommand
             //    parseMode: ParseMode.Html,
             //    cancellationToken: cancellationToken);
 
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: textMsg,
                 replyMarkup: inlineKeyboard,

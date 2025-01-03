@@ -44,7 +44,7 @@ public class LaunchGameCommand : BaseCommand
         var messageText = "Click the button below to play the game!";
 
         // Send the message with the inline keyboard
-        await botClient.AnswerCallbackQueryAsync(callbackQueryId: callbackQueryId, url: gameUrl,
+        await botClient.AnswerCallbackQuery(callbackQueryId: callbackQueryId, url: gameUrl,
             cancellationToken: cancellationToken);
     }
 }

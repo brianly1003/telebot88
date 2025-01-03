@@ -40,7 +40,7 @@ public class StartCommand(
 
             var textMsg = localizer["Welcome to CW88 Casino"].Value.Replace("\\u2705", "\u2705");
 
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId!,
                 text: textMsg,
                 replyMarkup: replyKeyboardMarkup,
@@ -49,7 +49,7 @@ public class StartCommand(
         catch (Exception ex)
         {
             logger.LogError(ex, ex.Message);
-            await botClient.SendTextMessageAsync(chatId,
+            await botClient.SendMessage(chatId,
                 localizer["An error occured. Please try again later!"],
                 cancellationToken: cancellationToken);
         }

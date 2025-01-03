@@ -18,45 +18,45 @@ public class OnlineBankingCommand(ICommandHandler commandHandler, IUserStateMana
     public override async Task ExecuteAsync(ITelegramBotClient botClient, Message? message, CallbackQuery? callback,
         InlineQuery? inlineQuery, CancellationToken cancellationToken)
     {
-            try
-            {
-                var chatId = message?.Chat.Id ?? -1;
-                var messageId = message?.MessageId ?? -1;
+        try
+        {
+            var chatId = message?.Chat.Id ?? -1;
+            var messageId = message?.MessageId ?? -1;
 
-                var inlineKeyboard = new InlineKeyboardMarkup(new[]
+            var inlineKeyboard = new InlineKeyboardMarkup(new[]
+            {
+                new[]
                 {
-                    new[]
-                    {
-                        InlineKeyboardButton.WithCallbackData(TextCommands.UnionBank),
-                        InlineKeyboardButton.WithCallbackData(TextCommands.BPIBank)
-                    },
-                    new[]
-                    {
-                        InlineKeyboardButton.WithCallbackData(TextCommands.MetroBank),
-                        InlineKeyboardButton.WithCallbackData(TextCommands.Empty)
-                    },
-                    new[]
-                    {
-                        InlineKeyboardButton.WithCallbackData(TextCommands.Back,
-                            DataExtensions.SerializeCallbackData(new CallbackData(TextCommands.Back,
-                                CommandNames.DepositCommand)))
-                    }
-                });
+                    InlineKeyboardButton.WithCallbackData(TextCommands.UnionBank),
+                    InlineKeyboardButton.WithCallbackData(TextCommands.BPIBank)
+                },
+                new[]
+                {
+                    InlineKeyboardButton.WithCallbackData(TextCommands.MetroBank),
+                    InlineKeyboardButton.WithCallbackData(TextCommands.Empty)
+                },
+                new[]
+                {
+                    InlineKeyboardButton.WithCallbackData(TextCommands.Back,
+                        DataExtensions.SerializeCallbackData(new CallbackData(TextCommands.Back,
+                            CommandNames.DepositCommand)))
+                }
+            });
 
-                var textMsg =
-                    "Please select" +
-                    $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
+            var textMsg =
+                "Please select" +
+                $"\n\nUpdated On: {DateTime.Now:d/MM/yyyy hh:mm:ss tt}";
 
-                _ = await botClient.EditMessageTextAsync(
-                    chatId: chatId,
-                    messageId: messageId,
-                    text: textMsg,
-                    replyMarkup: inlineKeyboard,
-                    cancellationToken: cancellationToken);
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
+            _ = await botClient.EditMessageText(
+                chatId: chatId,
+                messageId: messageId,
+                text: textMsg,
+                replyMarkup: inlineKeyboard,
+                cancellationToken: cancellationToken);
         }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
 }

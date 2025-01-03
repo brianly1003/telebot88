@@ -54,7 +54,7 @@ public class MiniAppCommand(ICommandHandler commandHandler, IUserStateManager us
             };
 
             // Respond to the inline query with the results
-            await botClient.AnswerInlineQueryAsync(
+            await botClient.AnswerInlineQuery(
                 inlineQueryId: inlineQueryId,
                 results: results,
                 isPersonal: true, // Results are specific to the user
@@ -75,7 +75,7 @@ public class MiniAppCommand(ICommandHandler commandHandler, IUserStateManager us
 
             var textMsg = @$"[🎮]({miniAppUrl})";
 
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: textMsg,
                 replyMarkup: null,
@@ -84,13 +84,13 @@ public class MiniAppCommand(ICommandHandler commandHandler, IUserStateManager us
 
             //var imageFile = InputFile.FromUri("https://github.com/brianly1003/telebot88/raw/main/assets/media/ezgif.com-video-to-mp4.mp4");
 
-            //_ = await botClient.SendAnimationAsync(
-            //    chatId: chatId,
-            //    animation: imageFile,
-            //    caption: textMsg,
-            //    replyMarkup: inlineKeyboard,
-            //    parseMode: ParseMode.Html,
-            //    cancellationToken: cancellationToken);
+            // _ = await botClient.SendAnimation(
+            //     chatId: chatId,
+            //     animation: imageFile,
+            //     caption: textMsg,
+            //     replyMarkup: inlineKeyboard,
+            //     parseMode: ParseMode.Html,
+            //     cancellationToken: cancellationToken);
         }
     }
 }

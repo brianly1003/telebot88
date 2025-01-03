@@ -18,7 +18,7 @@ public class PingCommand(ICommandHandler commandHandler, IUserStateManager userS
             var chatId = message?.Chat.Id;
             if (chatId == null) return;
 
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: "Pong!",
                 replyMarkup: null,

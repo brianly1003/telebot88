@@ -64,7 +64,7 @@ public class GamesCommand : BaseCommand
             //};
 
             // Respond to the inline query with the results
-            await botClient.AnswerInlineQueryAsync(
+            await botClient.AnswerInlineQuery(
                 inlineQueryId: inlineQueryId,
                 results: results,
                 isPersonal: true, // Results are specific to the user
