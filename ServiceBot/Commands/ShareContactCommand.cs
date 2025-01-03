@@ -42,47 +42,47 @@ public class ShareContactCommand(
                 formatPhoneNumber = '6' + formatPhoneNumber;
             }
 
-            var playerResponse = await playerService.GetPlayerByTelegramUID(chatId.ToString(), formatPhoneNumber);
-            if (playerResponse.Succeeded)
-            {
-                var playCommand = commandHandler.GetBotCommand(commandName: CommandNames.PlayCommand);
-                if (playCommand != null)
-                {
-                    await playCommand.ExecuteAsync(botClient, message, null, null, cancellationToken);
-                }
-            }
-            else
-            {
+            // var playerResponse = await playerService.GetPlayerByTelegramUID(chatId.ToString(), formatPhoneNumber);
+            // if (playerResponse.Succeeded)
+            // {
+            //     var playCommand = commandHandler.GetBotCommand(commandName: CommandNames.PlayCommand);
+            //     if (playCommand != null)
+            //     {
+            //         await playCommand.ExecuteAsync(botClient, message, null, null, cancellationToken);
+            //     }
+            // }
+            // else
+            // {
                 // Handle to update phone number with TelegramChatId
-                var registerPlayerResult = await playerService.RegisterPlayer(new RegisterPlayerArgs
-                {
-                    MobileNumber = formatPhoneNumber,
-                    TelegramUID = chatId.ToString()!
-                });
+                // var registerPlayerResult = await playerService.RegisterPlayer(new RegisterPlayerArgs
+                // {
+                //     MobileNumber = formatPhoneNumber,
+                //     TelegramUID = chatId.ToString()!
+                // });
 
-                if (!registerPlayerResult.Succeeded)
-                {
-                    var errorMessage = registerPlayerResult.Error.Code switch
-                    {
-                        "EPS_REP_IMV_0100" => localizer["You have entered an invalid mobile number. Please try again."],
-                        "EPS_REP_IMV_0101" => localizer["You have entered a registered mobile number. Please try again."],
-                        _ =>
-                            $"{localizer["Unable to register:"]} {registerPlayerResult.Error.Code}. {localizer["Please contact Customer Service if problem persists."]}"
-                    };
-
-                    await botClient.SendTextMessageAsync(chatId,
-                        errorMessage,
-                        cancellationToken: cancellationToken);
-                }
-                else
-                {
-                    var playCommand = commandHandler.GetBotCommand(commandName: CommandNames.PlayCommand);
-                    if (playCommand != null)
-                    {
-                        await playCommand.ExecuteAsync(botClient, message, null, null, cancellationToken);
-                    }
-                }
-            }
+                // if (!registerPlayerResult.Succeeded)
+                // {
+                //     var errorMessage = registerPlayerResult.Error.Code switch
+                //     {
+                //         "EPS_REP_IMV_0100" => localizer["You have entered an invalid mobile number. Please try again."],
+                //         "EPS_REP_IMV_0101" => localizer["You have entered a registered mobile number. Please try again."],
+                //         _ =>
+                //             $"{localizer["Unable to register:"]} {registerPlayerResult.Error.Code}. {localizer["Please contact Customer Service if problem persists."]}"
+                //     };
+                //
+                //     await botClient.SendTextMessageAsync(chatId,
+                //         errorMessage,
+                //         cancellationToken: cancellationToken);
+                // }
+                // else
+                // {
+                //     var playCommand = commandHandler.GetBotCommand(commandName: CommandNames.PlayCommand);
+                //     if (playCommand != null)
+                //     {
+                //         await playCommand.ExecuteAsync(botClient, message, null, null, cancellationToken);
+                //     }
+                // }
+            //}
         }
         catch (Exception ex)
         {

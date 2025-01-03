@@ -105,22 +105,22 @@ public class PlayCommand(
 
                 SetCulture(languageCode);
 
-                var oneTimeLoginLinkResponse = await playerService.OneTimeLoginLinkFor(chatId.ToString());
-                if (!oneTimeLoginLinkResponse.Succeeded)
-                {
-                    var errorMessage =
-                        $"{localizer["Unable to get one time login link:"]} {oneTimeLoginLinkResponse.Error.Code}. {localizer["Please contact Customer Service if problem persists."]}";
-                    await botClient.SendTextMessageAsync(chatId,
-                        errorMessage,
-                        cancellationToken: cancellationToken);
-                }
-                else
-                {
-                    _ = await botClient.SendTextMessageAsync(
-                        chatId: chatId,
-                        text: oneTimeLoginLinkResponse.Result,
-                        cancellationToken: cancellationToken);
-                }
+                // var oneTimeLoginLinkResponse = await playerService.OneTimeLoginLinkFor(chatId.ToString());
+                // if (!oneTimeLoginLinkResponse.Succeeded)
+                // {
+                //     var errorMessage =
+                //         $"{localizer["Unable to get one time login link:"]} {oneTimeLoginLinkResponse.Error.Code}. {localizer["Please contact Customer Service if problem persists."]}";
+                //     await botClient.SendTextMessageAsync(chatId,
+                //         errorMessage,
+                //         cancellationToken: cancellationToken);
+                // }
+                // else
+                // {
+                //     _ = await botClient.SendTextMessageAsync(
+                //         chatId: chatId,
+                //         text: oneTimeLoginLinkResponse.Result,
+                //         cancellationToken: cancellationToken);
+                // }
             }
         }
         catch (Exception ex)

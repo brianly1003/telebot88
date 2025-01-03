@@ -30,7 +30,7 @@ public class MainCommand(ICommandHandler commandHandler, IUserStateManager userS
 
             var chatId = message?.Chat.Id ?? -1;
 
-            _ = await botClient.SendTextMessageAsync(
+            _ = await botClient.SendMessage(
                 chatId: chatId,
                 text: "Please select",
                 replyMarkup: replyKeyboardMarkup,

@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Serialization;
 using Serilog;
-using CI24.Apps.NetCore.HttpApiFacade.Core;
 using CW88.TeleBot.Services.Queues;
 using CW88.TeleBot.Services.BackgroundServices;
 
@@ -24,11 +23,6 @@ var configuration = builder.Configuration;
 var coreConfigSection = configuration.GetSection(CoreConfig.Configuration);
 builder.Services.Configure<CoreConfig>(coreConfigSection);
 var coreConfig = coreConfigSection.Get<CoreConfig>();
-
-// Setup HttpApi configuration
-var httpApiSettingsSection = configuration.GetSection("EzPortalApiSettings");
-builder.Services.Configure<HttpApiSettings>(httpApiSettingsSection);
-var httpApiSettings = httpApiSettingsSection.Get<HttpApiSettings>();
 
 ConfigureService();
 var app = builder.Build();
@@ -50,12 +44,7 @@ void ConfigureService()
     builder.Services.AddSingleton<ICacheService, MemoryCacheService>();
     builder.Services.AddHttpContextAccessor();
     builder.Services.AddScoped<ServiceLocator>();
-
-    //TPS Api Facade
-    builder.Services.AddSingleton<HttpApiSettings>(httpApiSettings);
-    builder.Services.AddTransient<IJsonSerializationService, DefaultJsonSerializationService>();
-    builder.Services.AddSingleton<HttpApiCommandRunner>();
-
+    
     // Register shared services
     builder.Services.AddSingleton<UpdateQueue>();
     builder.Services.AddScoped<UpdateHandler>();
