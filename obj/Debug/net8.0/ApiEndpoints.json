@@ -1,0 +1,96 @@
+[
+  {
+    "ContainingType": "Karamel.TeleBot.Controllers.TokenController",
+    "Method": "Post",
+    "RelativePath": "Token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Karamel.TeleBot.ServiceBot.Models.TokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Karamel.TeleBot.Controllers.TokenController",
+    "Method": "Token",
+    "RelativePath": "Token/Generate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Karamel.TeleBot.Controllers.ClientController",
+    "Method": "Post",
+    "RelativePath": "api/Client",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Karamel.TeleBot.ServiceBot.Models.ClientRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Karamel.TeleBot.Controllers.ClientController",
+    "Method": "Action",
+    "RelativePath": "api/Client/Action",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Karamel.TeleBot.ServiceBot.Models.ClientRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Karamel.TeleBot.Controllers.NotificationController",
+    "Method": "Index",
+    "RelativePath": "api/Notification",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Karamel.TeleBot.Controllers.NotificationController",
+    "Method": "BroadcastMessage",
+    "RelativePath": "api/Notification/Broadcast",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Karamel.TeleBot.ServiceBot.Models.MessageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Karamel.TeleBot.Controllers.IndexController",
+    "Method": "Ping",
+    "RelativePath": "api/Ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
