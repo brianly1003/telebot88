@@ -1,9 +1,8 @@
-﻿using CW88.TeleBot.Model;
-using CW88.TeleBot.Services.Interfaces;
-using Microsoft.Extensions.Options;
-using Telegram.Bot;
+﻿using Microsoft.Extensions.Options;
+using W88.TeleBot.Model;
+using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.Services;
+namespace W88.TeleBot.Services;
 
 public class TelegramBotClientFactory(IServiceProvider serviceProvider) : ITelegramBotClientFactory
 {

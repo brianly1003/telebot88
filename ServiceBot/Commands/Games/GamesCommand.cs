@@ -1,19 +1,15 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using Telegram.Bot;
-using Telegram.Bot.Types;
+﻿using CW88.TeleBot.ServiceBot;
 using Telegram.Bot.Types.InlineQueryResults;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Games;
+namespace W88.TeleBot.ServiceBot.Commands.Games;
 
-public class GamesCommand : BaseCommand
+public class GamesCommand(ICommandHandler commandHandler, IUserStateManager userStateManager)
+    : BaseCommand(commandHandler, userStateManager)
 {
     public override string Name => CommandNames.GamesCommand;
     public override string CommandText => string.Empty;
-
-    public GamesCommand(ICommandHandler commandHandler, IUserStateManager userStateManager) : base(commandHandler, userStateManager)
-    {
-    }
 
     public override async Task ExecuteAsync(ITelegramBotClient botClient, Message? message, CallbackQuery? callbackQuery, InlineQuery? inlineQuery, CancellationToken cancellationToken)
     {
@@ -81,7 +77,7 @@ public class GamesCommand : BaseCommand
             //var playButton = InlineKeyboardButton.WithCallBackGame("Play Game");
             //var inlineKeyboard = new InlineKeyboardMarkup(playButton);
 
-            _ = await botClient.SendGameAsync(
+            _ = await botClient.SendGame(
                 chatId: (long)chatId,
                 gameShortName: "pokerways",
                 replyMarkup: null,

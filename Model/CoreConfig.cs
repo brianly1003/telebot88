@@ -1,4 +1,4 @@
-﻿namespace CW88.TeleBot.Model;
+﻿namespace W88.TeleBot.Model;
 
 public class BotConfig
 {

@@ -1,4 +1,4 @@
-﻿namespace CW88.TeleBot.Model.Player;
+﻿namespace W88.TeleBot.Model.Player;
 
 public class RegisterPlayerArgs
 {

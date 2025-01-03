@@ -1,9 +1,9 @@
-using CW88.TeleBot.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Options;
+using W88.TeleBot.Model;
 
-namespace CW88.TeleBot.Filters;
+namespace W88.TeleBot.Filters;
 
 /// <summary>
 /// Check for "X-Telegram-Bot-Api-Secret-Token"

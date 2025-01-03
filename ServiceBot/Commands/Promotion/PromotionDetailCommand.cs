@@ -1,14 +1,12 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Models;
-using CW88.TeleBot.ServiceBot.Utils;
-using CW88.TeleBot.Services.Interfaces;
-using Telegram.Bot;
-using Telegram.Bot.Types;
-using Telegram.Bot.Types.Enums;
+﻿using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Models;
+using W88.TeleBot.ServiceBot.Utils;
+using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Promotion;
+namespace W88.TeleBot.ServiceBot.Commands.Promotion;
 
 public class PromotionDetailCommand(
     ICommandHandler commandHandler,

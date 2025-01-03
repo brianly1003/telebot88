@@ -1,6 +1,6 @@
-﻿using CW88.TeleBot.ServiceBot.Models;
+﻿using W88.TeleBot.ServiceBot.Models;
 
-namespace CW88.TeleBot.ServiceBot.Interfaces;
+namespace W88.TeleBot.ServiceBot.Interfaces;
 
 public interface IUserStateManager
 {

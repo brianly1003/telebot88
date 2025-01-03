@@ -1,12 +1,12 @@
-﻿using CW88.TeleBot.Model;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Models;
-using CW88.TeleBot.Services.Interfaces;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using W88.TeleBot.Model;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Models;
+using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.Controllers;
+namespace W88.TeleBot.Controllers;
 
 [ApiController]
 [Route("[controller]")]

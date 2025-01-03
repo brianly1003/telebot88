@@ -1,13 +1,14 @@
-﻿using CW88.TeleBot.ServiceBot.Commands;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.Services.Domains;
-using CW88.TeleBot.Services.Interfaces;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
+using W88.TeleBot.ServiceBot.Commands;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.Services.Domains;
+using W88.TeleBot.Services.Interfaces;
+
 //using Karamel.LiveChat.Proto;
 
 //using ConversationService = Karamel.LiveChat.Proto.ConversationService;
 
-namespace CW88.TeleBot.Extensions;
+namespace W88.TeleBot.Extensions;
 
 public static class ServiceExtensions
 {

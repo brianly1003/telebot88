@@ -1,9 +1,8 @@
-﻿using CW88.TeleBot.Model.Player;
-using CW88.TeleBot.Services.Interfaces;
+﻿using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.Services.Domains;
+namespace W88.TeleBot.Services.Domains;
 
-public class PlayerService() : IPlayerService
+public class PlayerService : IPlayerService
 {
     // public async Task<OpResults<RegisterPlayer.RegisterPlayerResult>> RegisterPlayer(RegisterPlayerArgs args)
     // {

@@ -1,6 +1,6 @@
-﻿using CW88.TeleBot.Model;
+﻿using W88.TeleBot.Model;
 
-namespace CW88.TeleBot.Services.Interfaces;
+namespace W88.TeleBot.Services.Interfaces;
 
 public interface IPromotionService
 {

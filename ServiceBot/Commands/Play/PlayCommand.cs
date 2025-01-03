@@ -1,20 +1,19 @@
-﻿using CW88.TeleBot.Model;
-using CW88.TeleBot.Resources;
-using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Models;
-using CW88.TeleBot.Services.Interfaces;
+﻿using CW88.TeleBot.ServiceBot;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using Telegram.Bot;
-using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using W88.TeleBot.Model;
+using W88.TeleBot.Resources;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Models;
+using W88.TeleBot.Services.Interfaces;
 using File = System.IO.File;
 using InputFile = Telegram.Bot.Types.InputFile;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Play;
+namespace W88.TeleBot.ServiceBot.Commands.Play;
 
 public class PlayCommand(
     ICommandHandler commandHandler,

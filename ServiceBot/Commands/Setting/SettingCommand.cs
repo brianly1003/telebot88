@@ -1,9 +1,7 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using Telegram.Bot;
-using Telegram.Bot.Types;
+﻿using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Setting;
+namespace W88.TeleBot.ServiceBot.Commands.Setting;
 
 public class SettingCommand(ICommandHandler commandHandler, IUserStateManager userStateManager)
     : BaseCommand(commandHandler, userStateManager)

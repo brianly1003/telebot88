@@ -1,4 +1,4 @@
-﻿namespace CW88.TeleBot.Model.Conversation;
+﻿namespace W88.TeleBot.Model.Conversation;
 
 public class CreateConversationArgs
 {

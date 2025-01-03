@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace CW88.TeleBot.Services;
+﻿namespace W88.TeleBot.Services;
 
 // public class DefaultJsonSerializationService : IJsonSerializationService
 // {

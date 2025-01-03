@@ -1,13 +1,12 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Models;
-using CW88.TeleBot.ServiceBot.Utils;
-using CW88.TeleBot.Services.Interfaces;
-using Telegram.Bot;
-using Telegram.Bot.Types;
+﻿using CW88.TeleBot.ServiceBot;
 using Telegram.Bot.Types.ReplyMarkups;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Models;
+using W88.TeleBot.ServiceBot.Utils;
+using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Promotion;
+namespace W88.TeleBot.ServiceBot.Commands.Promotion;
 
 public class PromotionCommand(
     ICommandHandler commandHandler,
@@ -51,7 +50,7 @@ public class PromotionCommand(
                 promotionList.FirstOrDefault(i => i.PromotionType == callbackData?.CommandText)?.PromotionItems ?? [];
             var inlineKeyboard = GenerateInlineKeyboard(promotions, type: PromotionEnum.Promotion, columns: 2);
 
-            _ = await botClient.EditMessageTextAsync(
+            _ = await botClient.EditMessageText(
                 chatId: chatId,
                 messageId: messageId,
                 text: textMsg,

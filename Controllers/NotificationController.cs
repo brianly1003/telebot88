@@ -1,12 +1,10 @@
-﻿using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Models;
-using Microsoft.AspNetCore.Mvc;
-using Telegram.Bot;
+﻿using Microsoft.AspNetCore.Mvc;
 using Telegram.Bot.Exceptions;
 using Telegram.Bot.Polling;
-using Telegram.Bot.Types;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Models;
 
-namespace CW88.TeleBot.Controllers;
+namespace W88.TeleBot.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

@@ -1,7 +1,7 @@
-﻿using CW88.TeleBot.Services.Interfaces;
-using CW88.TeleBot.Services.Queues;
+﻿using W88.TeleBot.Services.Interfaces;
+using W88.TeleBot.Services.Queues;
 
-namespace CW88.TeleBot.Services.BackgroundServices;
+namespace W88.TeleBot.Services.BackgroundServices;
 
 public class UpdateBackgroundService(
     ILogger<UpdateBackgroundService> logger,

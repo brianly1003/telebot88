@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CW88.TeleBot.Controllers;
+namespace W88.TeleBot.Controllers;
 
 [ApiController]
 [Route("api")]

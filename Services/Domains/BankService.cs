@@ -1,6 +1,6 @@
-﻿using CW88.TeleBot.Services.Interfaces;
+﻿using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.Services.Domains;
+namespace W88.TeleBot.Services.Domains;
 
 public class BankService : IBankService
 {

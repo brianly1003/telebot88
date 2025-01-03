@@ -1,20 +1,15 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using Telegram.Bot;
-using Telegram.Bot.Types;
+﻿using CW88.TeleBot.ServiceBot;
 using Telegram.Bot.Types.ReplyMarkups;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Games;
+namespace W88.TeleBot.ServiceBot.Commands.Games;
 
-public class LaunchGameCommand : BaseCommand
+public class LaunchGameCommand(ICommandHandler commandHandler, IUserStateManager userStateManager)
+    : BaseCommand(commandHandler, userStateManager)
 {
     public override string Name => CommandNames.LaunchGameCommand;
     public override string CommandText => TextCommands.LaunchGame;
-
-    public LaunchGameCommand(ICommandHandler commandHandler, IUserStateManager userStateManager) : base(
-        commandHandler, userStateManager)
-    {
-    }
 
     public override async Task ExecuteAsync(ITelegramBotClient botClient, Message? message,
         CallbackQuery? callbackQuery, InlineQuery? inlineQuery, CancellationToken cancellationToken)

@@ -1,14 +1,12 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Utils;
-using CW88.TeleBot.Services.Interfaces;
-using Telegram.Bot;
-using Telegram.Bot.Exceptions;
+﻿using Telegram.Bot.Exceptions;
 using Telegram.Bot.Polling;
-using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Utils;
+using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.Services;
+namespace W88.TeleBot.Services;
 
 public class UpdateHandler(
     ILogger<UpdateHandler> logger,

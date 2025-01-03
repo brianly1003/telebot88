@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace CW88.TeleBot.Utility;
+namespace W88.TeleBot.Utility;
 
 public static class Utility
 {

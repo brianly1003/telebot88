@@ -1,7 +1,6 @@
-﻿using Telegram.Bot;
-using Telegram.Bot.Polling;
+﻿using Telegram.Bot.Polling;
 
-namespace CW88.TeleBot.Services.Interfaces;
+namespace W88.TeleBot.Services.Interfaces;
 
 public interface IBaseUpdateHandler : IUpdateHandler, IWebhookHandler
 {

@@ -1,4 +1,4 @@
-﻿namespace CW88.TeleBot.ServiceBot.Constants;
+﻿namespace W88.TeleBot.ServiceBot.Constants;
 
 public static class TextCommands
 {

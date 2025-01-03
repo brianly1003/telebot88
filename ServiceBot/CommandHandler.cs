@@ -1,7 +1,7 @@
-﻿using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.Services;
+﻿using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.Services;
 
-namespace CW88.TeleBot.ServiceBot;
+namespace W88.TeleBot.ServiceBot;
 
 public class CommandHandler(ServiceLocator serviceLocator) : ICommandHandler
 {

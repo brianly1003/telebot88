@@ -1,10 +1,8 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using System.Globalization;
-using Telegram.Bot;
-using Telegram.Bot.Types;
+﻿using System.Globalization;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot;
+namespace W88.TeleBot.ServiceBot;
 
 public abstract class BaseCommand(
     ICommandHandler commandHandler,

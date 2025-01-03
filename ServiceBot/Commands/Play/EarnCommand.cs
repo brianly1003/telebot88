@@ -1,13 +1,12 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Models;
-using CW88.TeleBot.ServiceBot.Utils;
-using Telegram.Bot;
-using Telegram.Bot.Types;
+﻿using CW88.TeleBot.ServiceBot;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Models;
+using W88.TeleBot.ServiceBot.Utils;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Play;
+namespace W88.TeleBot.ServiceBot.Commands.Play;
 
 public class EarnCommand(ICommandHandler commandHandler, IUserStateManager userStateManager)
     : BaseCommand(commandHandler,

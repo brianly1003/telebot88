@@ -1,11 +1,10 @@
-﻿using CW88.TeleBot.Filters;
-using CW88.TeleBot.Model;
-using CW88.TeleBot.Services.Queues;
+﻿using W88.TeleBot.Filters;
+using W88.TeleBot.Model;
+using W88.TeleBot.Services.Queues;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using Telegram.Bot.Types;
 
-namespace CW88.TeleBot.Controllers;
+namespace W88.TeleBot.Controllers;
 
 [ApiController]
 [Route("/{botName}")]

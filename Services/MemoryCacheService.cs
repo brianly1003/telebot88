@@ -1,7 +1,7 @@
-﻿using CW88.TeleBot.Services.Interfaces;
-using Microsoft.Extensions.Caching.Memory;
+﻿using Microsoft.Extensions.Caching.Memory;
+using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.Services;
+namespace W88.TeleBot.Services;
 
 public class MemoryCacheService(IMemoryCache memoryCache) : ICacheService
 {

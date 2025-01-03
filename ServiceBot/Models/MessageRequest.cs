@@ -1,4 +1,4 @@
-﻿namespace CW88.TeleBot.ServiceBot.Models;
+﻿namespace W88.TeleBot.ServiceBot.Models;
 
 public class MessageRequest
 {

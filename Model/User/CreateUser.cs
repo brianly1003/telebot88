@@ -1,4 +1,4 @@
-﻿namespace CW88.TeleBot.Model.User;
+﻿namespace W88.TeleBot.Model.User;
 
 public class CreateUserArgs
 {

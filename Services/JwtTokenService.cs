@@ -1,12 +1,12 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using CW88.TeleBot.Model;
-using CW88.TeleBot.Services.Interfaces;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using W88.TeleBot.Model;
+using W88.TeleBot.Services.Interfaces;
 
-namespace CW88.TeleBot.Services;
+namespace W88.TeleBot.Services;
 
 public class JwtTokenService(ICacheService cacheService, IOptions<CoreConfig> options) : IJwtTokenService
 {

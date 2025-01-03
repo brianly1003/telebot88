@@ -1,18 +1,18 @@
 using System.Text;
-using CW88.TeleBot.Controllers;
-using CW88.TeleBot.Extensions;
-using CW88.TeleBot.Model;
-using CW88.TeleBot.ServiceBot;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Utils;
-using CW88.TeleBot.Services;
-using CW88.TeleBot.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Serialization;
 using Serilog;
-using CW88.TeleBot.Services.Queues;
-using CW88.TeleBot.Services.BackgroundServices;
+using W88.TeleBot.Controllers;
+using W88.TeleBot.Extensions;
+using W88.TeleBot.Model;
+using W88.TeleBot.ServiceBot;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Utils;
+using W88.TeleBot.Services;
+using W88.TeleBot.Services.Queues;
+using W88.TeleBot.Services.BackgroundServices;
+using W88.TeleBot.Services.Interfaces;
 
 const string allowSpecificOrigin = "AllowSpecificOrigin";
 

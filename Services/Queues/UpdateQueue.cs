@@ -1,7 +1,6 @@
 ﻿ using System.Collections.Concurrent;
-using Telegram.Bot.Types;
 
-namespace CW88.TeleBot.Services.Queues;
+ namespace W88.TeleBot.Services.Queues;
 
 public class UpdateQueue(int maxProcessedIds = 10000)
 {

@@ -1,11 +1,10 @@
-﻿using CW88.TeleBot.ServiceBot.Constants;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Utils;
-using Telegram.Bot;
-using Telegram.Bot.Types;
+﻿using W88.TeleBot.ServiceBot;
+using W88.TeleBot.ServiceBot.Utils;
 using Telegram.Bot.Types.ReplyMarkups;
+using W88.TeleBot.ServiceBot.Constants;
+using W88.TeleBot.ServiceBot.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Bank;
+namespace W88.TeleBot.ServiceBot.Commands.Bank;
 
 public class BankCommand(ICommandHandler commandHandler, IUserStateManager userStateManager)
     : BaseCommand(commandHandler, userStateManager)

@@ -1,11 +1,12 @@
 ﻿using System.Net;
 using System.Security.Cryptography;
 using System.Text;
-using CW88.TeleBot.ServiceBot.Interfaces;
-using CW88.TeleBot.ServiceBot.Models;
 using Newtonsoft.Json;
+using W88.TeleBot.ServiceBot.Interfaces;
+using W88.TeleBot.ServiceBot.Models;
+using User = W88.TeleBot.ServiceBot.Models.User;
 
-namespace CW88.TeleBot.ServiceBot.Utils;
+namespace W88.TeleBot.ServiceBot.Utils;
 
 public class TelegramAuth(ILogger<TelegramAuth> logger) : ITelegramAuth
 {

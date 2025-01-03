@@ -1,8 +1,7 @@
-﻿using CW88.TeleBot.ServiceBot.Interfaces;
-using Telegram.Bot;
-using Telegram.Bot.Types;
+﻿using CW88.TeleBot.ServiceBot;
+using W88.TeleBot.ServiceBot.Interfaces;
 
-namespace CW88.TeleBot.ServiceBot.Commands.Games;
+namespace W88.TeleBot.ServiceBot.Commands.Games;
 
 public class GameDetailCommand : BaseCommand
 {

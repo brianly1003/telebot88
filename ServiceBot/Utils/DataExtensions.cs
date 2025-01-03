@@ -1,8 +1,8 @@
 ﻿using System.Text;
 using System.Text.Json;
-using CW88.TeleBot.ServiceBot.Models;
+using W88.TeleBot.ServiceBot.Models;
 
-namespace CW88.TeleBot.ServiceBot.Utils;
+namespace W88.TeleBot.ServiceBot.Utils;
 
 public static class DataExtensions
 {

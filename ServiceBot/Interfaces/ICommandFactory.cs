@@ -1,6 +1,4 @@
-﻿using Telegram.Bot.Types;
-
-namespace CW88.TeleBot.ServiceBot.Interfaces;
+﻿namespace W88.TeleBot.ServiceBot.Interfaces;
 
 public interface ICommandFactory
 {

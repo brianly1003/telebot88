@@ -1,11 +1,10 @@
-﻿using CW88.TeleBot.Model;
-using CW88.TeleBot.Services.Interfaces;
+﻿using W88.TeleBot.Model;
+using W88.TeleBot.Services.Interfaces;
 using Microsoft.Extensions.Options;
-using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types.Enums;
 
-namespace CW88.TeleBot.Services.BackgroundServices;
+namespace W88.TeleBot.Services.BackgroundServices;
 
 public class TelegramBotHostedService(
     ILogger<TelegramBotHostedService> logger,
