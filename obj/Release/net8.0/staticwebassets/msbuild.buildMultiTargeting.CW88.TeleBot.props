@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\CW88.TeleBot.props" />
-</Project>
